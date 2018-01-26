@@ -147,7 +147,7 @@ class ContentBlockerHelper {
         if let list = ContentBlockerHelper.readWhitelistFile() {
             ContentBlockerHelper.whitelistedDomains.domainSet = Set(list)
         }
-
+        
         TPStatsBlocklistChecker.shared.startup()
 
         ContentBlockerHelper.removeOldListsByDateFromStore(prefs: prefs) {
